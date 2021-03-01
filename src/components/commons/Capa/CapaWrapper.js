@@ -3,15 +3,15 @@ import propToStyle from '../../../theme/utils/propToStyle';
 
 const CapaWrapper = styled.div`
     width: 100%;
-    ${propToStyle('backgroundImage')}
-    ${propToStyle('backgroundRepeat')}
-    ${propToStyle('backgroundPosition')}
-    ${propToStyle('backgroundSize')}
+    background-color: ${({ theme }) => theme.colors.primary.main.color};
+    display: flex;
+    justify-content: center;
+    align-items: center;
     ${propToStyle('height')}
 `;
 
-CapaWrapper.Title = styled.h1`
-    color: ${({ theme }) => theme.colors.primary.main.contrastText};
+CapaWrapper.CapaIcon = styled.img`
+    ${propToStyle('width')}
 `;
 
 export default CapaWrapper;

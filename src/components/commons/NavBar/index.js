@@ -12,7 +12,7 @@ const NavWrapper = styled.nav`
     }
 
     a {
-      color: ${({ theme }) => theme.colors.secondary.main.color};
+      color: ${({ theme }) => theme.colors.secondary.main.contrastText};
     }
 `;
 

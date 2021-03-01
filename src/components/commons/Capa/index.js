@@ -4,18 +4,12 @@ import CapaWrapper from './CapaWrapper';
 export default function Capa() {
   return (
     <CapaWrapper
-      backgroundImage="url(/images/magento-capa.jpg)"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="center center"
-      backgroundSize="cover"
       height={{
         xs: '190px',
-        md: '300px',
+        md: '220px',
       }}
     >
-      <CapaWrapper.Title>
-        João Paulo
-      </CapaWrapper.Title>
+      <CapaWrapper.CapaIcon src="images/magento-icon.svg" alt="logo" width={{ xs: '110px', md: '160px' }} />
     </CapaWrapper>
   );
 }

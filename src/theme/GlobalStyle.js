@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: ${({ theme }) => theme.fontFamily};
+        background-color: ${({ theme })=> theme.colors.secondary.main.color};
     }
     /* Full height layout */
     html, body {
@@ -22,6 +23,9 @@ const GlobalStyle = createGlobalStyle`
     }
     a {
         text-decoration: none;
+    }
+    li {
+        list-style: none;
     }
     #__next {
         flex: 1;

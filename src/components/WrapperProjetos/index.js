@@ -7,9 +7,7 @@ export default function WrapperProjetos() {
   return (
     <Grid.Container>
       <SectionTitle />
-      <Grid.Row>
-        <Card />
-      </Grid.Row>
+      <Card />
     </Grid.Container>
   );
 }

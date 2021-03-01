@@ -28,6 +28,8 @@ const Container = styled.div`
   })}
 
     ${propToStyle('marginTop')}
+    ${propToStyle('display')}
+    ${propToStyle('justifyContent')}
 `;
 
 const Grid = {
@@ -45,7 +47,18 @@ const Grid = {
         flex-grow: 1;
         max-width: 100%;
 
-        ${function ({ value }) {
+        ${function ({ value, feature }) {
+    if (feature === true) {
+      return breakpointsMedia({
+        md: css`
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: ${(100 * 12) / 12}%;
+                    max-width: ${(100 * 12) / 12}%;
+        `,
+      });
+    }
+
     if (typeof value === 'number') {
       return css`
                     flex-grow: 0;
