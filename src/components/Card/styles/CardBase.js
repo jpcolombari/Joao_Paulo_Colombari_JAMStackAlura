@@ -30,7 +30,4 @@ CardBase.CardDestaque = styled.a`
     ${propToStyle('textAlign')};
 `;
 
-CardBase.CardDestaque.LeftSize = styled.div`
-`;
-
 export default CardBase;

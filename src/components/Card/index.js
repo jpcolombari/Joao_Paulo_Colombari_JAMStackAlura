@@ -4,9 +4,9 @@ import CardBase from './styles/CardBase';
 
 const projects = [
   {
-    name: 'Projeto 1',
-    url: '/projeto1',
-    image: '/images/magento-capa.jpg',
+    name: 'Instalura Base',
+    url: 'https://instalura-base-jpcolombari.vercel.app/',
+    image: '/images/instalura.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     feature: true,
   },
@@ -38,16 +38,20 @@ export default function Card() {
               value={12}
               feature={project.feature}
             >
-              <CardBase.CardDestaque flexDirection={{ xs: 'column', md: 'row' }} marginBottom="32px" textAlign={{ xs: 'center', md: 'left' }}>
-                <CardBase.CardImage src={project.image} alt="Imagem do projeto" />
-                <CardBase.CardDestaque.LeftSize>
-                  <CardBase.CardTitle>
-                    {project.name}
-                  </CardBase.CardTitle>
-                  <CardBase.CardText display={{ xs: 'none', md: 'block' }}>
-                    {project.description}
-                  </CardBase.CardText>
-                </CardBase.CardDestaque.LeftSize>
+              <CardBase.CardDestaque href={project.url} target="_blank" flexDirection={{ xs: 'column', md: 'row' }} marginBottom="32px" textAlign={{ xs: 'center', md: 'left' }}>
+                <Grid.Row>
+                  <Grid.Col value={{ xs: 12, md: 6 }}>
+                    <CardBase.CardImage src={project.image} alt="Imagem do projeto" />
+                  </Grid.Col>
+                  <Grid.Col value={{ xs: 12, md: 6 }}>
+                    <CardBase.CardTitle>
+                      {project.name}
+                    </CardBase.CardTitle>
+                    <CardBase.CardText display={{ xs: 'none', md: 'block' }}>
+                      {project.description}
+                    </CardBase.CardText>
+                  </Grid.Col>
+                </Grid.Row>
               </CardBase.CardDestaque>
             </Grid.Col>
           );
